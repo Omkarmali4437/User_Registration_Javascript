@@ -1,7 +1,7 @@
 const REGEXNAME = new RegExp("[A-Z]{1}[a-z]{2,}");
 const REGEXEMAIL = new RegExp("^[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-])*@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)*$");
 const REGEXPHONE = new RegExp("^[0-9]{2}[ ][0-9]{10}$");
-const REGEXPASSWORd = new RegExp("^(?=.*[A-Z])(?=.*[0-9]).{8,20}$");
+const REGEXPASSWORd = new RegExp("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=[^$@!#%*?&]*[$#@!%*?&][^$@!#%*?&]*$).{8,}");
 
 console.log("Welcome to User Reegistration Problem");
 
