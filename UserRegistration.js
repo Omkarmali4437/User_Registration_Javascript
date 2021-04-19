@@ -1,5 +1,6 @@
 const REGEXNAME = new RegExp("[A-Z]{1}[a-z]{2,}");
 const REGEXEMAIL = new RegExp("^[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-])*@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)*$");
+const REGEXPHONE = new RegExp("^[0-9]{2}[ ][0-9]{10}$");
 
 console.log("Welcome to User Reegistration Problem");
 
@@ -23,7 +24,15 @@ if(REGEXNAME.test(lastname)){
 var email = string.question("Enter your email address: ");
 
 if(REGEXEMAIL.test(email)){
-    console.log("Your have entered valid email address: "+email+"\n");
+    console.log("You have entered valid email address: "+email+"\n");
 }else{
     console.log("Please check your email address \n");
+}
+
+var phone = string.question("Enter your phone number with country code: ");
+
+if(REGEXPHONE.test(phone)){
+    console.log("You have entered a valid phone number: "+phone+"\n");
+}else{
+    console.log("Please check you phone number");
 }
